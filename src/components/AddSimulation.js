@@ -8,14 +8,11 @@ import URL from './Constants';
 import {
   Typography,
   Grid,
-  MenuItem,
-  FormControl,
   FormGroup,
   Button,
   Card,
   CardContent,
   TextField,
-  Select,
 } from '@material-ui/core';
 
 import {TextValidator} from 'react-material-ui-form-validator';
@@ -24,7 +21,6 @@ import { useHistory } from 'react-router';
 function AddSimulation(props) {
 
     let history = useHistory(); 
-    const [reynolds, setReynolds] = useState(null);
     const [aoa, setAoA] = useState([]);
     const [name, setName] = useState(false);
 
@@ -34,7 +30,7 @@ function AddSimulation(props) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json',  'Authorization': 'Bearer ' + localStorage.getItem('token') },
       mode: 'cors',
-      body: JSON.stringify({name: name, aoa : aoa, rn : reynolds})
+      body: JSON.stringify({name: name, aoa : aoa})
 
   };
 
@@ -48,10 +44,6 @@ function AddSimulation(props) {
         setAoA(event.target.value);
     }
 
-    const handleReynolds = (event) => {
-        setReynolds(event.target.value);
-    }
-
     const handleName = (event) => {
       setName(event.target.value);
     }
@@ -60,12 +52,14 @@ function AddSimulation(props) {
           <>
             <Card variant="outlined">
               <br />
+
               <Grid item>
                 <Typography variant="h3" align="center">
                   Simulation Parameters
                 </Typography>
               </Grid>
               <br />
+              <br/>
               <ValidatorForm>
                 <FormGroup>
                   <Card variant="outlined">
@@ -83,39 +77,10 @@ function AddSimulation(props) {
                           />
                         </Grid>
                       
-                      <Grid container spacing={2}>
-                        <Grid item xs={6}>
-                          <br />
-
-                        </Grid>
-                      </Grid>
-                      <br />
+                        <br />
+                        <br />
                       <br />
                       <Grid container spacing={3} variant="outlined">
-                        <Grid item xs={6}>
-                          <TextValidator
-                            id="Reynolds"
-                            label="Reynolds Number"
-                            onChange={handleReynolds}
-                            type="number"
-                            InputLabelProps={{
-                              shrink: true,
-                            }}
-                            variant="outlined"
-                            validators={[
-                              'required',
-                              'isPositive',
-                              'minNumber:0',
-                              'maxNumber:0',
-                            ]}
-                            errorMessages={[
-                              'Required field',
-                              'Input must be positive',
-                              'Minimum value is 0',
-                              'Maximum value is 15',
-                            ]}
-                          />
-                        </Grid>
                         <Grid item xs={6}>
                           <TextField
                             id="AoA"

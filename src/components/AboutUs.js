@@ -5,14 +5,11 @@ import Enara from "../images/Enara.png";
 import Carmen from "../images/Carmen.png";
 import Gowthaman from "../images/Gowthaman.png";
 import Pierre from "../images/Pierre.png";
-import {Link, withRouter} from "react-router-dom";
+import {Link} from "react-router-dom";
 import Logo from "../images/cashew.png";
-import { useHistory } from 'react-router'
 
 
 function AboutUs() {
-
-    let history = useHistory();
 
     return(
         <div>
