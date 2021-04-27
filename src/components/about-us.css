@@ -1,0 +1,26 @@
+.about-us-flex {
+    display: flex;
+    justify-content : space-evenly;
+}
+
+.about-us-flex > div {
+    width: 200px;
+    height: 200px;
+}
+
+.about-us-image {
+    width: 200px;
+    height: 200px;
+    align-content: center;
+    border-radius: 50%;
+}
+
+.name {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.role {
+    text-align: center;
+}
