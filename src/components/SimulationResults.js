@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef } from 'react'
 import { DataGrid } from '@material-ui/data-grid';
 import {Link} from "react-router-dom";
 import Logo from "../images/cashew.png";
@@ -31,8 +31,7 @@ function SimulationResults(props) {
     const [simulationName, setSimulationName] = useState(null);
     const [re, setRe] = useState(null);
 
-    useEffect (() => {
-
+    const apiCall = () => {
         let isSubscribed = true;
         
         fetch(URL + '/run_simulation?id=' + props.location.state.id,{
@@ -51,6 +50,34 @@ function SimulationResults(props) {
         });
 
         return () => (isSubscribed = false);
+    }
+
+    useInterval(() => {
+        apiCall();
+      }, 3000);
+
+      function useInterval(callback, delay) {
+        const savedCallback = useRef();
+      
+        // Remember the latest callback.
+        useEffect(() => {
+          savedCallback.current = callback;
+        }, [callback]);
+      
+        // Set up the interval.
+        useEffect(() => {
+          function tick() {
+            savedCallback.current();
+          }
+          if (delay !== null) {
+            let id = setInterval(tick, delay);
+            return () => clearInterval(id);
+          }
+        }, [delay]);
+      };
+
+    useEffect (() => {
+        apiCall();
     }, [props.location.state.id]);
 
 
