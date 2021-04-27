@@ -2,6 +2,9 @@ import React, {useState } from 'react';
 import { useHistory } from "react-router-dom";
 import {TextField,} from '@material-ui/core';
 import URL from './Constants';
+import {Link} from "react-router-dom";
+import Logo from "../images/cashew.png";
+import BaseCase from "../images/baseCase.tar.gz"
 
 function CreateSimulation() {
 
@@ -43,11 +46,23 @@ function CreateSimulation() {
             history.push({pathname : "/simulations"})
         })
 
-        
     };
 
 
         return(
+
+            <div>
+                <div class="flex-container" style={{padding:30}}>
+                        <Link to="/simulations">
+                            <img className="image" src={Logo} alt="Cashew"></img>
+                        </Link>
+                    
+                    <div><a href={BaseCase} download="baseCase.tar.gz">BaseCase</a>  </div>
+
+                    <div><button color="inherit"  classes="flex-item" onClick={() => { localStorage.clear(); history.push("/")}}>Logout</button></div>
+                </div>
+            
+
             <div style={{ display: "flex", paddingTop: 10, paddingBottom: 10, paddingLeft : 40 , flexDirection : "column"}}>
 
                 <div style={{padding : 30}}>
@@ -70,6 +85,8 @@ function CreateSimulation() {
                 </div>
 
             </div>
+
+        </div>
         )
 
 }

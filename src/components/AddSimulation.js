@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 
 import {ValidatorForm} from 'react-material-ui-form-validator'
+import {Link} from "react-router-dom";
+import Logo from "../images/cashew.png";
+
 
 import URL from './Constants';
 
@@ -50,6 +53,12 @@ function AddSimulation(props) {
 
         return (
           <>
+                <div class="flex-container" style={{padding:30}}>
+                    <Link to="/simulations">
+                        <img className="image" src={Logo} alt="Cashew"></img>
+                    </Link>
+                <div><button color="inherit"  classes="flex-item" onClick={() => { localStorage.clear(); history.push("/")}}>Logout</button></div>
+            </div>
             <Card variant="outlined">
               <br />
 

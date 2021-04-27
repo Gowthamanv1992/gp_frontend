@@ -48,7 +48,7 @@ function AboutUs() {
                     <div>
                         <img className="about-us-image" src={Gowthaman} alt="Gowthaman"></img>
                         <div className="name">GOWTHAMAN VIVEKANANDAN</div>
-                        <div className="role">Software Engineer & Frontend Lead</div>
+                        <div className="role">Fullstack Developer</div>
                     </div>
                     <div>
                         <img className="about-us-image" src={Pierre} alt="Pierre"></img>
