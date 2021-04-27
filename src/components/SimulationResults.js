@@ -66,7 +66,7 @@ function SimulationResults(props) {
 
                 <div style={{padding : 25}}>
                     <span style={{padding : 20}}><b>Simulation Name</b> : {simulationName}</span>
-                    <span style={{padding : 20}}><b>Solver</b> : M-L SST k-w</span>
+                    <span style={{padding : 20}}><b>Turbulance Model</b> : M-L SST k-w</span>
                     <span style={{padding : 20}}><b>Reynolds Number</b> : {re}</span>
 
                     <span>
