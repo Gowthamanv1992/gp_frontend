@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 
 import {ValidatorForm} from 'react-material-ui-form-validator'
 
+import URL from './Constants';
+
+
 import {
   Typography,
   Grid,
@@ -35,7 +38,7 @@ function AddSimulation(props) {
 
   };
 
-  fetch('http://localhost:8000/run_simulation?id=' + props.location.state.id, requestOptions)
+  fetch(URL + '/run_simulation?id=' + props.location.state.id, requestOptions)
     .then(() => {
         history.push({state: { id: props.location.state.id},pathname : "/results"})
     })

@@ -3,6 +3,7 @@ import "./home.css";
 import Logo from "../images/cashew.png";
 import { useHistory } from 'react-router'
 import { MenuItem } from '@material-ui/core';
+import URL from './Constants';
 
 import {Link} from "react-router-dom";
 
@@ -12,7 +13,7 @@ function ListSimulations() {
     let history = useHistory();
 
     useEffect (() => {
-        fetch('http://localhost:8000/simulations',{
+        fetch(URL + '/simulations',{
             method: 'GET',
             headers: {
                 'Accept': '*/*',

@@ -3,6 +3,7 @@ import { DataGrid } from '@material-ui/data-grid';
 import {Link, withRouter} from "react-router-dom";
 import Logo from "../images/cashew.png";
 import { useHistory } from 'react-router'
+import URL from './Constants';
 
 const columns = [
     
@@ -30,7 +31,7 @@ function SimulationResults(props) {
 
         let isSubscribed = true;
         
-        fetch('http://localhost:8000/run_simulation?id=' + props.location.state.id,{
+        fetch(URL + '/run_simulation?id=' + props.location.state.id,{
             method: 'GET',
             headers: {
                 'Accept': '*/*',

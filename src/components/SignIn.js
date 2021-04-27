@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Redirect } from 'react-router-dom';
+import URL from './Constants';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -71,7 +72,7 @@ export default function SignIn() {
               body: JSON.stringify({username: email, password : password})
           };
   
-          fetch('http://localhost:8000/users/register', requestOptions)
+          fetch(URL + '/users/register', requestOptions)
           
           setTimeout(() => {
               login()
@@ -90,7 +91,7 @@ export default function SignIn() {
           body: JSON.stringify({username: email, password : password})
       };
 
-      fetch('http://localhost:8000/api/token', requestOptions)
+      fetch(URL + '/api/token', requestOptions)
       .then(response => response.json())
       .then(data => {
           if('access' in data) {
