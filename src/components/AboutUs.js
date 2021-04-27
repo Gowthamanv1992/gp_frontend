@@ -16,7 +16,7 @@ function AboutUs() {
 
                 <div class="flex-container" style={{padding:30}}>
                         <Link to="/">
-                            <img className="image" src={Logo} alt="Cashew"></img>
+                            <img className="image" style={{width : 200}} src={Logo} alt="Cashew"></img>
                         </Link>
                     
                 </div>

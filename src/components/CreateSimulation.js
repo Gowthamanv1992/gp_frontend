@@ -63,7 +63,7 @@ function CreateSimulation() {
             <div>
                 <div class="flex-container" style={{padding:30}}>
                         <Link to="/simulations">
-                            <img className="image" src={Logo} alt="Cashew"></img>
+                            <img className="image" style={{width : 200}} src={Logo} alt="Cashew"></img>
                         </Link>
                     
                     <div><button color="inherit"  classes="flex-item" onClick={() => { history.push("/help")}}>Help</button></div>

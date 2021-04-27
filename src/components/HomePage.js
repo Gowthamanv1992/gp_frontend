@@ -10,7 +10,7 @@ class HomePage extends Component {
             <div>
 
                 <div class="flex-container" style={{padding:30}}>
-                    <div class="flex-image"><img className="image" src={Logo} alt="Cashew"></img></div>
+                    <div class="flex-image"><img className="image" style={{width : 200}} src={Logo} alt="Cashew"></img></div>
                     <div><button color="inherit"  classes="flex-item" onClick={() => {this.props.history.push("/about_us")}}>About Us</button></div>
                     <div><button color="inherit"  classes="flex-item" onClick={() => {this.props.history.push("/signin")}}>Login/Sign Up</button></div>
                 </div>

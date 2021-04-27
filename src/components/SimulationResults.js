@@ -10,15 +10,15 @@ import { MenuItem } from '@material-ui/core';
 const columns = [
     
     { field: 'name', headerName: 'Name', width: 150 },
-    { headerName: 'AoA', field: 'aoa', width: 80 },
+    { headerName: 'AoA', field: 'aoa', width: 100 },
     { headerName: 'CA1', field: 'ca1', width: 80 },
     { headerName: 'CA2', field: 'ca2', width: 80 },
     { headerName: 'CE1', field: 'ce1', width: 80 },
-    { headerName: 'CE2', field: 'ce2', width: 80 },
+    { headerName: 'CE2', field: 'ce2', width: 150 },
     { headerName: 'Predicted Cl', field: 'predicted_lift', width: 150 },
     { headerName: 'Predicted Cd', field: 'predicted_drag', width: 150 },
-    { headerName: 'Cl', field: 'actual_lift', width: 120 },
-    { headerName: 'Cd', field: 'actual_drag', width: 120 },
+    { headerName: 'Cl', field: 'actual_lift', width: 150 },
+    { headerName: 'Cd', field: 'actual_drag', width: 150 },
     { headerName: 'Start Time', field: 'start_time', width: 200 },
     
 ]
@@ -59,7 +59,7 @@ function SimulationResults(props) {
 
                 <div class="flex-container" style={{padding:30}}>
                         <Link to="/simulations">
-                            <img className="image" src={Logo} alt="Cashew"></img>
+                            <img className="image" style={{width : 200}} src={Logo} alt="Cashew"></img>
                         </Link>
                     <div><button color="inherit"  classes="flex-item" onClick={() => { localStorage.clear(); history.push("/")}}>Logout</button></div>
                 </div>
