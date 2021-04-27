@@ -40,14 +40,14 @@ function ListSimulations() {
 
                 <div>
                     <Link style={{ textDecoration: 'none' }} to={`/create`}>
-                        <MenuItem style={{ padding: 20, paddingRight : 200, float : "right", fontSize : 30, fontWeight : 20 }}> Add New </MenuItem>
+                        <MenuItem style={{ padding: 20, color : "green", paddingRight : 200, float : "right", fontSize : 20, fontWeight : 15 }}> Add New </MenuItem>
                     </Link>
                 </div>
                 <div style={{padding : 100}}>
-                    <text style={{fontSize : 20}}>Simulations: </text>
+                    <text style={{fontSize : 25, fontWeight : 15, color : "grey"}}>Simulations: </text>
                         {simulations.map((simulation, index) => (
                         <h5 key={index}>
-                        <Link to={{state: { id: simulation.id},pathname: '/results'}}>{simulation.name}</Link>
+                        <li style={{paddingLeft : 30}}><Link style={{ textDecoration: 'none' }} to={{state: { id: simulation.id},pathname: '/results'}}><text style={{fontSize : 18}}>{simulation.name}</text></Link></li>
                         </h5>
                         ))}
                 </div>

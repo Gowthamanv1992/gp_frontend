@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 import Logo from "../images/cashew.png";
 import { useHistory } from 'react-router'
 import URL from './Constants';
+import { MenuItem } from '@material-ui/core';
+
 
 const columns = [
     
@@ -66,13 +68,17 @@ function SimulationResults(props) {
                     <span style={{padding : 20}}><b>Simulation Name</b> : {simulationName}</span>
                     <span style={{padding : 20}}><b>Solver</b> : M-L SST k-w</span>
                     <span style={{padding : 20}}><b>Reynolds Number</b> : {re}</span>
+
+                    <span>
+                    <Link to={{state: { id: props.location.state.id},pathname: '/run'}}>
+                    <MenuItem style={{ color : "green", paddingRight : 200, float : "right", fontSize : 20, fontWeight : 15 }}>Run New Simulation</MenuItem>
+                    </Link>
+                </span>
                 </div>
 
-                <div>
-                    <Link to={{state: { id: props.location.state.id},pathname: '/run'}}>Run New Simulation</Link>
-                </div>
 
-                <div style={{height: 700, width: '100%', paddingLeft : 10,paddingRight : 10, paddingTop : 40}}>
+                <br/>
+                <div style={{height: 700, width: '100%', paddingLeft : 10,paddingRight : 10, paddingTop : 10}}>
                     <DataGrid scrollbarSize={0} disableColumnMenu  pagination rows={results} columns={columns}  checkboxSelection={false} />
                 </div>
 

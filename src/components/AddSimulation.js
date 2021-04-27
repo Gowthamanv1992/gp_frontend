@@ -59,7 +59,9 @@ function AddSimulation(props) {
                     </Link>
                 <div><button color="inherit"  classes="flex-item" onClick={() => { localStorage.clear(); history.push("/")}}>Logout</button></div>
             </div>
-            <Card variant="outlined">
+
+
+            <Card>
               <br />
 
               <Grid item>
@@ -71,7 +73,7 @@ function AddSimulation(props) {
               <br/>
               <ValidatorForm>
                 <FormGroup>
-                  <Card variant="outlined">
+                  <Card>
                     <CardContent>
 
                         <Grid item xs={1} style={{width : 300}}>

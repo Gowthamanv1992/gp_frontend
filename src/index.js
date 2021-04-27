@@ -9,6 +9,7 @@ import ListSimulations from './components/ListSimulations.js';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import SimulationResults from './components/SimulationResults';
 import AboutUs from './components/AboutUs.js';
+import Help from "./components/Help.js";
 
 
 ReactDOM.render(
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Route path="/signin"  component={SignIn} />
           <Route path="/results"  component={SimulationResults} />
           <Route path="/about_us"  component={AboutUs} />
+          <Route path="/help"  component={Help} />
           <Route path="/"  component={HomePage} />
         </Switch>
     </BrowserRouter>
