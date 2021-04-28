@@ -62,7 +62,6 @@ function AddSimulation(props) {
 
 
             <Card>
-              <br />
 
               <Grid item>
                 <Typography variant="h3" align="center">
@@ -89,8 +88,6 @@ function AddSimulation(props) {
                         </Grid>
                       
                         <br />
-                        <br />
-                      <br />
                       <Grid container spacing={3} variant="outlined">
                         <Grid item xs={6}>
                           <TextField
@@ -115,9 +112,7 @@ function AddSimulation(props) {
                   </Card>
                 </FormGroup>
               </ValidatorForm>
-              <br />
-    
-                <br />
+
             </Card>
             <br />
             <center>

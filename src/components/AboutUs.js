@@ -25,11 +25,8 @@ function AboutUs() {
 
                 <h3 style={{textAlign : "center"}}>Cashew is developed by Cranfield University students provides platform to integrate and run Simulation as a Service. It uses advanced state-of-the-art Machine Learning techniques to optimise the simulations. </h3>
                 
-                <br/>
-                <br/>
-
                 <h1 style={{textAlign : "center"}}>Our Team</h1>
-                <div className="about-us-flex" style={{paddingTop : 80}}>
+                <div className="about-us-flex" style={{paddingTop : 40}}>
                     <div>
                         <img className="about-us-image" src={Alice} alt="Alice"></img>
                         <div className="name">ALICE DRAILLARD</div>
