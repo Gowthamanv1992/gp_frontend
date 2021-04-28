@@ -71,9 +71,8 @@ function AddSimulation(props) {
               </Grid>
               <br />
               <br/>
-              <ValidatorForm>
+              <ValidatorForm style={{paddingLeft : 80}}>
                 <FormGroup>
-                  <Card>
                     <CardContent>
 
                         <Grid item xs={1} style={{width : 300}}>
@@ -112,15 +111,11 @@ function AddSimulation(props) {
                         </Grid>
                       </Grid>
                     </CardContent>
-                  </Card>
                 </FormGroup>
               </ValidatorForm>
               <br />
     
-                <br />
-            </Card>
-            <br />
-            <center>
+              <center>
               <Button
                 variant="contained"
                 onClick={() => handleSubmit()}
@@ -132,7 +127,11 @@ function AddSimulation(props) {
                 Launch simulation
               </Button>
             </center>
-          </>
+
+            <br/>
+            <br/>
+            </Card>
+        </>
         )
 
 }
