@@ -61,7 +61,7 @@ function CreateSimulation() {
             </div> :
             
             <div>
-                <div class="flex-container" style={{padding:30}}>
+                <div class="flex-container" style={{padding:20}}>
                         <Link to="/simulations">
                             <img className="image" style={{width : 200}} src={Logo} alt="Cashew"></img>
                         </Link>
@@ -71,11 +71,11 @@ function CreateSimulation() {
                 
                 </div>
             
-                <div style={{padding : 30}}><button color="inherit"  classes="flex-item" onClick={() => { history.push("/simulations")}}>Back</button></div>
+                <div style={{padding : 20}}><button color="inherit"  classes="flex-item" onClick={() => { history.push("/simulations")}}>Back</button></div>
 
             <div style={{ display: "flex", paddingTop: 10, paddingBottom: 10, paddingLeft : 40 , flexDirection : "column"}}>
 
-                <div style={{padding : 30}}>
+                <div style={{padding : 20}}>
                     Simulation
                     <TextField style={{width : 200, paddingLeft : 30}} value={simulationName} onChange={handleInput} />
                 </div>
