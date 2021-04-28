@@ -84,13 +84,13 @@ function CreateSimulation() {
                         <input style={ {padding: 10}} type="file" onChange={onFileChange} />
                 </div>
 
-                <div style={{padding : 30, width : 300, display : "flex", columnGap : 20}}>
+                <div style={{padding : 30, width : 600, display : "flex", columnGap : 20}}>
                     Upload Basecase
                     <input style={ {padding: 10}} type="file" onChange={onBaseFileChange} />
                     
                 </div>
 
-                <div style={ {padding: 80}}>
+                <div style={ {padding: 30, paddingLeft : 80}}>
                     <button onClick={onFileUpload}>Create Simulation</button>
                 </div>
 
